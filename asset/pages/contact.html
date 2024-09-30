@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRES BEAU</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        .bg-image {
+            position: absolute;
+            left: 100px;
+            top: 100px;
+            opacity: 0.1;
+
+        }
+
+        body {
+            background: linear-gradient(to left, black, grey);
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <section class="container">
+                <section class="logo">
+                    <img src="../image/logo.png" alt="" class="">
+                    <p class="logo-text">TRES BEAU</p>
+                </section>
+                <section class="nav-menu">
+                    <ul>
+                        <li><a href="/index.html">HOME</a></li>
+                        <li><a href="./about.html">ABOUT</a></li>
+                        <li><a href="./services.html">SERVICES</a></li>
+                        <li><a href="">CONTACT</a></li>
+                    </ul>
+                </section>
+            </section>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="contact">
+            <div class="bg-image">
+                <img src="../image/contact1.webp" alt="" width="500px" height="600px">
+            </div>
+            <h1>Contact Us</h1>
+            <div class="words">
+                <p>We'll style while you smile!</p>
+                <p>Get prim and proper with us.</p>
+            </div>
+            <div class="icons">
+                <i class="bi bi-telephone-fill"> +91 1234567890</i><br>
+                <i class="bi bi-globe"> www.tresbeau.com</i> <br>
+                <i class="bi bi-geo-alt-fill"> New York, USA</i>
+            </div>
+            <div class="form-container">
+                <div class="form-btn">
+                    <span onclick=" login()">Login</span>
+                    <span onclick="register()">Register</span>
+                    <hr id="indicator">
+                </div>
+                <form id="loginform">
+                    <input type="text" placeholder="Username">
+                    <input type="password" name="" id="" placeholder="Password">
+                    <button type="submit" class="btn"> LOGIN</button>
+                    <a href=""> forget password?</a>
+                </form>
+                <form id="regform">
+                    <input type="text" placeholder="Username">
+                    <input type="email" name="" id="" placeholder="Email">
+                    <input type="password" name="" id="" placeholder="Password">
+                    <button type="submit" class="btn"> REGISTER</button>
+                </form>
+            </div>
+
+        </section>
+
+        <script>
+            var loginform = document.getElementById("loginform");
+            var regform = document.getElementById("regform");
+            var indicator = document.getElementById("indicator");
+
+            function register() {
+
+                regform.style.transform = "translateX(0px)";
+                loginform.style.transform = "translateX(0px)";
+                indicator.style.transform = "translateX(100px)";
+            }
+
+            function login() {
+
+                regform.style.transform = "translateX(300px)";
+                loginform.style.transform = "translateX(300px)";
+                indicator.style.transform = "translateX(0px)";
+            }
+
+        </script>
+    </main>
+
+</body>
+
+</html>
